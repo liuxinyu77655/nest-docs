@@ -5,6 +5,9 @@ hero:
   name: 'Nest 通关秘籍'
   text: '从零到全栈'
   tagline: 学习 Node 最流行的企业级框架
+  image:
+    src: /nest-logo.svg
+    alt: NestJS Logo
   actions:
     - theme: brand
       text: 开始学习
