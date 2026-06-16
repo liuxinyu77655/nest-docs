@@ -3,3 +3,10 @@ docs/.vitepress/dist/
 docs/.vitepress/cache/
 .vercel
 images_raw/
+scripts/
+docs/public/image/
+.DS_Store
+*.pyc
+__pycache__/
+.env
+.env.local

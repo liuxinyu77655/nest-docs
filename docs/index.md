@@ -6,7 +6,7 @@ hero:
   text: '从零到全栈'
   tagline: 学习 Node 最流行的企业级框架
   image:
-    src: /nest-logo.svg
+    src: https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/nest-logo.svg
     alt: NestJS Logo
   actions:
     - theme: brand
@@ -24,4 +24,3 @@ features:
   - title: 实战项目
     details: 会议室预订系统、考试系统、聊天室项目
 ---
-
