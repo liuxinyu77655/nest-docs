@@ -20,11 +20,11 @@ Nest 是对标 Java 的 Spring 框架的后端框架，它有很多概念。
 
 这些路由在 Controller 里声明：
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-1.png)
+![](/image/3-1.png)
 
 比如这里就是声明了一个 /user/create 的 post 接口，声明了一个 /user/list 的 get 接口。
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-2.png)
+![](/image/3-2.png)
 
 在 class 上和它方法的方法上加上 @Controller、@Get、@Post 的装饰器就可以了。
 
@@ -34,23 +34,23 @@ post 的请求体，get 的请求参数，都可以通过装饰来取：
 
 通过 @Param 取 url 中的参数，比如 /user/111 里的 111
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-3.png)
+![](/image/3-3.png)
 
 通过 @Query 来取 url 中的 query 参数，比如 /user/xx?id=222 里的 222
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-4.png)
+![](/image/3-4.png)
 
 通过 @Body 取 /book/create 的请求体内容：
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-5.png)
+![](/image/3-5.png)
 
 请求体一般会传递 json，比如`{ username: 'xxx', password: 'xxx' }`
 
 我们会通过 dto （data transfer object）来接收。
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-6.png)
+![](/image/3-6.png)
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-7.png)
+![](/image/3-7.png)
 
 传递到 handler 的就已经是 dto 对象了。
 
@@ -58,25 +58,25 @@ post 的请求体，get 的请求参数，都可以通过装饰来取：
 
 请求参数解析出来了，下一步就是做业务逻辑的处理了，这些东西不写在 controller 里，而是放在 service 里。
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-8.png)
+![](/image/3-8.png)
 
 **service 里做业务逻辑的具体实现，比如操作数据库等**
 
 同理，/book/list、/book/create 接口是在另一个 BookController 里：
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-9.png)
+![](/image/3-9.png)
 
 它的业务逻辑实现也是在 BookService 里。
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-10.png)
+![](/image/3-10.png)
 
 很明显，UserController 和 UserService 是一块的，BookController 和 BookService 是一块的。
 
 所以，Nest 有了模块的划分，每个模块里都包含 controller 和 service：
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-11.png)
+![](/image/3-11.png)
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-12.png)
+![](/image/3-12.png)
 
 通过 @Module 声明模块，它包含 controllers 和 providers。
 
@@ -88,7 +88,7 @@ post 的请求体，get 的请求参数，都可以通过装饰来取：
 
 比如这个 UserController 依赖了 JwtService，那只需要通过 @Inject 声明依赖，然后就可以在方法里用了：
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-13.png)
+![](/image/3-13.png)
 
 运行的时候会自动查找这个 JwtServcie 的实例来注入。
 
@@ -96,19 +96,19 @@ post 的请求体，get 的请求参数，都可以通过装饰来取：
 
 provider 有很多种写法：
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-14.png)
+![](/image/3-14.png)
 
 默认的 XxxService 只是一种简化的写法。
 
 还可以直接 useValue 创建，通过 useFactory 创建等。
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-15.png)
+![](/image/3-15.png)
 
 刚才提到了 IoC 会自动从容器中查找实例来注入，注入的方式有两种：
 
 属性注入和构造器注入。
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-16.png)
+![](/image/3-16.png)
 
 这种写在构造器里的依赖，就是构造器注入。
 
@@ -118,7 +118,7 @@ provider 有很多种写法：
 
 每个模块都会包含 controller、service、module、dto、entities 这些东西：
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-17.png)
+![](/image/3-17.png)
 
 controller 是处理路由，解析请求参数的。
 
@@ -130,7 +130,7 @@ entities 是封装对应数据库表的实体的。
 
 nest 应用跑起来后，会从 AppModule 开始解析，初始化 IoC 容器，加载所有的 service 到容器里，然后解析 controller 里的路由，接下来就可以接收请求了。
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-18.png)
+![](/image/3-18.png)
 
 其实这种架构叫做 MVC 模式，也就是 model、view、controller。
 
@@ -140,23 +140,23 @@ controller 接收请求参数，交给 model 处理（model 就是处理 service
 
 这种在 Nest 提供了 AOP （Aspect Oriented Programming 面向切面编程）的机制
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-19.png)
+![](/image/3-19.png)
 
 具体来说，有 Middleware、Guard、Interceptor、Pipe、Exception Filter 这五种。
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-20.png)
+![](/image/3-20.png)
 
 它们都是在目标 controller 的 handler 前后，额外加一段逻辑的。
 
 比如你可以通过 interceptor 实现请求到响应的时间的记录：
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-21.png)
+![](/image/3-21.png)
 
 这种逻辑适合放在 controller 里么？
 
 不适合，这种通用逻辑应该通过 interceptor 等方式抽离出来，然后需要用的时候在 controller 上声明一下：
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-22.png)
+![](/image/3-22.png)
 
 这些就是 Nest 的核心概念了。
 
@@ -164,11 +164,11 @@ controller 接收请求参数，交给 model 处理（model 就是处理 service
 
 比如创建新项目：
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-23.png)
+![](/image/3-23.png)
 
 创建项目里的某个新模块：
 
-![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/3-24.png)
+![](/image/3-24.png)
 
 都可以通过 @nestjs/cli 来做。
 
