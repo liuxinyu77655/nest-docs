@@ -22,11 +22,11 @@ express、koa 这种处理请求响应的库并不能约束代码的写法，代
 
 比如 Nest 代码一般都是分了很多模块：
 
-![](https://liushuaiyang.oss-cn-shanghai.aliyuncs.com/nest-docs/image/2-1.png)
+![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/2-1.png)
 
 每个模块下都是 controller、service、guard、filter、interceptor、dto 等这些代码：
 
-![](https://liushuaiyang.oss-cn-shanghai.aliyuncs.com/nest-docs/image/2-2.png)
+![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/2-2.png)
 
 什么代码放在哪里都是有规范的。
 
@@ -34,13 +34,13 @@ express、koa 这种处理请求响应的库并不能约束代码的写法，代
 
 <https://github.com/apitable/apitable/tree/35b05eb421d31a4e4b68ca0bacb1fb484186f4ea/packages/room-server>
 
-![](https://liushuaiyang.oss-cn-shanghai.aliyuncs.com/nest-docs/image/2-3.png)
+![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/2-3.png)
 
 那 egg 和 midway 呢？
 
 egg 的 ts 支持不行，在当下 ts 这么主流的情况下，已经不合适了。更何况它是阿里的项目，而阿里 egg 团队也被打包裁了。
 
-![](https://liushuaiyang.oss-cn-shanghai.aliyuncs.com/nest-docs/image/2-4.png)
+![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/2-4.png)
 
 midway 呢？
 
@@ -48,9 +48,9 @@ star 数差太多了，和 nest 不在一个量级。
 
 而且你能保证它不是下一个 egg 么？
 
-![](https://liushuaiyang.oss-cn-shanghai.aliyuncs.com/nest-docs/image/2-5.png)
+![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/2-5.png)
 
-![](https://liushuaiyang.oss-cn-shanghai.aliyuncs.com/nest-docs/image/2-6.png)
+![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/2-6.png)
 
 Nest 是在全世界都很火，在国内也越来越流行，找不到啥对手。
 
@@ -62,7 +62,7 @@ Nest 是在全世界都很火，在国内也越来越流行，找不到啥对手
 
 比如类似这种的后端架构：
 
-![](https://liushuaiyang.oss-cn-shanghai.aliyuncs.com/nest-docs/image/2-7.png)
+![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/2-7.png)
 
 所以我们学的并不只是 Nest，而是整个后端生态。
 
@@ -78,27 +78,27 @@ Nest 是在全世界都很火，在国内也越来越流行，找不到啥对手
 
 <https://eleduck.com/posts/oQfOD7>
 
-![](https://liushuaiyang.oss-cn-shanghai.aliyuncs.com/nest-docs/image/2-8.png)
+![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/2-8.png)
 
-![](https://liushuaiyang.oss-cn-shanghai.aliyuncs.com/nest-docs/image/2-9.png)
+![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/2-9.png)
 
 这个：
 
 <https://eleduck.com/tposts/Baf0Dy>
 
-![](https://liushuaiyang.oss-cn-shanghai.aliyuncs.com/nest-docs/image/2-10.png)
+![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/2-10.png)
 
 或者这个：
 
 <https://eleduck.com/posts/njfbzD>
 
-![](https://liushuaiyang.oss-cn-shanghai.aliyuncs.com/nest-docs/image/2-11.png)
+![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/2-11.png)
 
 还有这个：
 
 <https://eleduck.com/posts/XNfBXN>
 
-![](https://liushuaiyang.oss-cn-shanghai.aliyuncs.com/nest-docs/image/2-12.png)
+![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/2-12.png)
 
 如果你会 React + Nest 技术栈，找个远程全栈工作不也很香么。
 
@@ -108,7 +108,7 @@ Nest 是在全世界都很火，在国内也越来越流行，找不到啥对手
 
 比如刚才我们看到这个国外的这个盈利的产品，它就是用 Nest 做的后端：
 
-![](https://liushuaiyang.oss-cn-shanghai.aliyuncs.com/nest-docs/image/2-13.png)
+![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/2-13.png)
 
 或者你是大学生，想做一个写在简历里的前端项目，那只写前端就可以了么？
 
@@ -122,21 +122,21 @@ Nest 的架构很优雅，因为它用了不少设计模式。
 
 就是因为它用了适配器的设计模式：
 
-![](https://liushuaiyang.oss-cn-shanghai.aliyuncs.com/nest-docs/image/2-14.png)
+![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/2-14.png)
 
 Nest 本身只依赖 HttpServer 接口，并不和具体的库耦合。
 
-![](https://liushuaiyang.oss-cn-shanghai.aliyuncs.com/nest-docs/image/2-15.png)
+![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/2-15.png)
 
 你想换别的 http 处理的库，只要写一个新的适配器就好了。
 
-![](https://liushuaiyang.oss-cn-shanghai.aliyuncs.com/nest-docs/image/2-16.png)
+![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/2-16.png)
 
 再比如 Nest 内构建复杂对象很多地方都用到了 builder 的设计模式：
 
-![](https://liushuaiyang.oss-cn-shanghai.aliyuncs.com/nest-docs/image/2-17.png)
+![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/2-17.png)
 
-![](https://liushuaiyang.oss-cn-shanghai.aliyuncs.com/nest-docs/image/2-18.png)
+![](https://vercel-nestjs.oss-cn-beijing.aliyuncs.com/nest-docs/image/2-18.png)
 
 类似这样的设计有很多。
 
